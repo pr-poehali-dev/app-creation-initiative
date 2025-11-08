@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   const projects = [
     {
       id: 1,
@@ -50,7 +52,7 @@ const Index = () => {
               Мои проекты
               <Icon name="ArrowRight" className="ml-2" size={20} />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6" onClick={() => navigate("/contact")}>
               Связаться
               <Icon name="Mail" className="ml-2" size={20} />
             </Button>
